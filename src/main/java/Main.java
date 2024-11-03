@@ -30,16 +30,12 @@ public class homework {
         return placeArr(arr, n, index + 1);
 	}
 	//ex17
-	public static boolean AscendingOrder(int [] arr,int n,int index) {
-		
-	
-	    if (arr[index] > arr[index + 1]) 
-	        return false;
-			
-	    if (index >= arr.length - 1) 
+	public static boolean AscendingOrder(int [] arr, int index) {		
+	    if (index == arr.length - 1) 
 	         return true;
-	    
-        return AscendingOrder(arr, arr[index + 1], index + 1);
+	    if (arr[index] > arr[index + 1]) 
+	        return false;			
+            return AscendingOrder(arr, index + 1);
 	
 	}
 	//ex18
